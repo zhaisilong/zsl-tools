@@ -8,4 +8,10 @@
 
 `Model` 是上面的两者
 
+AutoProcessor = AutoTokenizer + AutoFeatureExtractor
+
+AutoProcessor = AutoProcessor + model
+
+
+
 
