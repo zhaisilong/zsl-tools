@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proc &mdash; zsl-tools 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Python" href="../../py/index.html" />
+    <link rel="prev" title="System Control" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> zsl-tools
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">Basic</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Shell</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../tmux.html">Tmux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git.html">Git</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">系统管理</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Proc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../py/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chem/index.html">Chem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ai/index.html">AI</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">zsl-tools</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../index.html">Shell</a> &raquo;</li>
+          <li><a href="index.html">System Control</a> &raquo;</li>
+      <li>Proc</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/sh/sys/proc.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="proc">
+<h1>Proc<a class="headerlink" href="#proc" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>/proc/cpuinfo cpu的信息
+/proc/mounts 系统中使用的所有挂载
+/proc/uptime 系统已经运行了多久
+/proc/version Linux内核版本和gcc版本
+/proc/swaps 交换空间的使用情况
+/proc/stat 所有的CPU活动信息
+/proc/net 网卡设备信息
+/proc/tty tty设备信息
+/proc/vmstat 虚拟内存统计信息
+/proc/diskstats 取得磁盘信息
+/proc/zoneinfo 显示内存空间的统计信息，对分析虚拟内存行为很有用
+</pre></div>
+</div>
+<p>以下是 <code class="docutils literal notranslate"><span class="pre">/proc</span></code> 目录中进程 N 的信息</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>/proc/N pid为N的进程信息
+/proc/N/cmdline 进程启动命令
+/proc/N/cwd 链接到进程当前工作目录
+/proc/N/environ 进程环境变量列表
+/proc/N/exe 链接到进程的执行命令文件
+/proc/N/fd 包含进程相关的所有的文件描述符
+/proc/N/maps 与进程相关的内存映射信息
+/proc/N/mem 指代进程持有的内存，不可读
+/proc/N/root 链接到进程的根目录
+/proc/N/stat 进程的状态
+/proc/N/statm 进程使用的内存的状态
+/proc/N/status 进程状态信息，比stat/statm更具可读性
+/proc/self 链接到当前正在运行的进程
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="System Control" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../py/index.html" class="btn btn-neutral float-right" title="Python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, zhaisilong.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

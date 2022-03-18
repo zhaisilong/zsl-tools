@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3. pydantic &mdash; zsl-tools 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> zsl-tools
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">Basic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sh/index.html">Shell</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chem/index.html">Chem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ai/index.html">AI</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">zsl-tools</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><span class="section-number">3. </span>pydantic</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/py/style/pydantic.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pydantic">
+<h1><span class="section-number">3. </span>pydantic<a class="headerlink" href="#pydantic" title="Permalink to this headline">¶</a></h1>
+<p>pydantic 库是一种常用的用于数据接口 schema 定义与检查的库。</p>
+<p>通过 pydantic 库，我们可以更为规范地定义和使用数据接口，这对于大型项目的开发将会更为友好。</p>
+<p>当然，除了 pydantic 库之外，像是 valideer 库、marshmallow库、trafaret 库以及 cerberus 库等都可以完成相似的功能，但是相较之下，pydantic库的执行效率会更加优秀一些。</p>
+<section id="id1">
+<h2><span class="section-number">3.1. </span>基本用法<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 数据通过 BaseModel 类来定义</span>
+<span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span>
+
+<span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+	<span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="c1"># 直接传值</span>
+<span class="n">p</span><span class="p">:</span> <span class="n">Person</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Tom&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>  <span class="c1"># {&quot;name&quot;: &quot;Tom&quot;}</span>
+
+<span class="c1"># 通过字典传入</span>
+<span class="n">p</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Tom&quot;</span><span class="p">}</span>
+<span class="n">p</span><span class="p">:</span> <span class="n">Person</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="o">**</span><span class="n">p</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>  <span class="c1"># {&quot;name&quot;: &quot;Tom&quot;}</span>
+
+<span class="c1"># 通过其他的实例化对象传入</span>
+<span class="n">p2</span><span class="p">:</span> <span class="n">Person</span> <span class="o">=</span> <span class="n">Person</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p2</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>  <span class="c1"># {&quot;name&quot;: &quot;Tom&quot;}</span>
+</pre></div>
+</div>
+<p>特色：</p>
+<ul class="simple">
+<li><p>传入错误值：报错</p></li>
+<li><p>传入未定义值：忽略</p></li>
+</ul>
+</section>
+<section id="id2">
+<h2><span class="section-number">3.2. </span>pydantic 基本数据类型<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">,</span> <span class="n">Set</span><span class="p">,</span> <span class="n">Tuple</span>
+
+<span class="k">class</span> <span class="nc">Demo</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">a</span><span class="p">:</span> <span class="nb">int</span> <span class="c1"># 整型</span>
+    <span class="n">b</span><span class="p">:</span> <span class="nb">float</span> <span class="c1"># 浮点型</span>
+    <span class="n">c</span><span class="p">:</span> <span class="nb">str</span> <span class="c1"># 字符串</span>
+    <span class="n">d</span><span class="p">:</span> <span class="nb">bool</span> <span class="c1"># 布尔型</span>
+    <span class="n">e</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="c1"># 整型列表</span>
+    <span class="n">f</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="c1"># 字典型，key 为 str，value 为 int</span>
+    <span class="n">g</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="c1"># 集合</span>
+    <span class="n">h</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="c1"># 元组</span>
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h2><span class="section-number">3.3. </span>高级数据结构考察<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
+
+<span class="k">class</span> <span class="nc">Gender</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+	<span class="n">man</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;man&quot;</span>
+	<span class="n">women</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;women&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="see-also">
+<h2><span class="section-number">3.4. </span>See also<a class="headerlink" href="#see-also" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>https://blog.csdn.net/codename_cys/article/details/107675748</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, zhaisilong.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

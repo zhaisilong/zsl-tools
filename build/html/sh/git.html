@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Git &mdash; zsl-tools 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="System Control" href="sys/index.html" />
+    <link rel="prev" title="tmux" href="tmux.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> zsl-tools
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">Basic</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Shell</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tmux.html">Tmux</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Git</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Git</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#setup">Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">配置自动换基</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">常用命令</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">忽略特殊文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">子模块</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id11">克隆带有子模块的仓库</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">标签管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gitee">Gitee</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#git-lfs">git-lfs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sys/index.html">系统管理</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../py/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chem/index.html">Chem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ai/index.html">AI</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">zsl-tools</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Shell</a> &raquo;</li>
+      <li>Git</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/sh/git.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="git">
+<h1>Git<a class="headerlink" href="#git" title="Permalink to this headline">¶</a></h1>
+<p>远程仓库和本地仓库名字的区别：</p>
+<ul class="simple">
+<li><p>origin 远程库名</p></li>
+<li><p>main 本地分支名</p></li>
+<li><p>origin/main 远程库中的远程分支</p></li>
+</ul>
+<section id="id1">
+<h2>Git<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<section id="setup">
+<h3>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo apt install git
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h3>配置<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>每个仓库的 Git 配置文件都放在当前目录下的 <code class="docutils literal notranslate"><span class="pre">.git/config</span></code> 文件中。</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">/etc/gitconfig</span> <span class="pre">文件</span></code>：系统中对所有用户都普遍适用的配置。若使用 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span></code> 时用 <code class="docutils literal notranslate"><span class="pre">--system</span></code> 选项，读写的就是这个文件。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">~/.gitconfig</span> <span class="pre">文件</span></code>：用户目录下的配置文件只适用于该用户。若使用 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span></code> 时用 <code class="docutils literal notranslate"><span class="pre">--global</span></code> 选项，读写的就是这个文件。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">当前文件夹/.git/config</span> <span class="pre">文件</span></code>: 这里的配置仅仅针对当前项目有效。使用 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span></code></p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 查看当前配置信息</span>
+git config --list
+git config --global --list 
+
+<span class="c1"># 修改用户信息</span>
+git config --global user.email <span class="s2">&quot;zhaisilong@outlook.com&quot;</span>
+git config --global user.name <span class="s2">&quot;zhaisilong&quot;</span>
+
+<span class="c1"># 添加 GPG 密钥 要先上传公钥</span>
+<span class="c1">#E GPG 用于签名验证 注释</span>
+git config --global user.signingkey D482B92E13D3FCBA
+<span class="c1"># 自动验证签名 自动加上 -S</span>
+git config --global commit.gpgsign <span class="nb">true</span>
+
+<span class="c1"># 文本编辑器</span>
+git config --global core.editor emacs
+<span class="c1"># 差异分析工具</span>
+git config --global merge.tool vimdiff
+<span class="c1"># 开启界面颜色</span>
+git config --global color.ui <span class="nb">true</span>
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h3>配置自动换基<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>自动换基，保持开发线的整洁。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git config --global pull.rebase <span class="nb">true</span>
+git config --global rebase.autoStash <span class="nb">true</span>
+</pre></div>
+</div>
+<section id="ssh-key">
+<h4>配置 ssh key<a class="headerlink" href="#ssh-key" title="Permalink to this headline">¶</a></h4>
+<section id="id4">
+<h5>配置文件的编辑<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h5>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>vim ~/.ssh/config 
+<span class="c1"># github</span>
+Host github.com
+HostName github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/git.rsa
+
+<span class="c1"># gitee</span>
+Host gitee.com
+HostiName gitee.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/git.rsa
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="id5">
+<h3>常用命令<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># 初始化仓库</span>
+git init
+
+<span class="c1"># 增加文件</span>
+git add <span class="o">[</span>file1<span class="o">]</span> <span class="o">[</span>file2<span class="o">]</span>
+<span class="c1"># 增加所有文件</span>
+git add -A
+
+<span class="c1"># 提交到本地仓库 并附加说明</span>
+<span class="c1"># `-m`后面输入的是本次提交的说明</span>
+git commit -m <span class="s2">&quot;wrote a readme file&quot;</span>
+<span class="c1"># 签名验证，需要配置 gpg</span>
+git commit -S -m <span class="s2">&quot;...&quot;</span>
+
+<span class="c1"># -M, --move --force:</span>
+git branch -M main  <span class="c1">#重命名分支名</span>
+<span class="c1"># 列出所有分支</span>
+git branch -a
+<span class="c1"># 查看远程库的信息</span>
+git remote -v 
+
+<span class="c1"># 添加远程库</span>
+<span class="c1">## 可以从这个仓库克隆出新的仓库，也可以把一个已有的本地仓库与之关联，然后，把本地仓库的内容推送到GitHub仓库。</span>
+git remote add <span class="o">{{</span>remote_name<span class="o">}}</span> <span class="o">{{</span>remote_url<span class="o">}}</span>
+git remote add origin https://github.com/xxzhai123/PbootCMS.git
+git remote remove <span class="o">{{</span>remote_name<span class="o">}}</span>
+git remote rename <span class="o">{{</span>old_name<span class="o">}}</span> <span class="o">{{</span>new_name<span class="o">}}</span>
+
+<span class="c1"># 将本地库推到远程</span>
+<span class="c1">## 当只有一个分支名时，简写成git push</span>
+git push <span class="o">{{</span>remote_name<span class="o">}}</span> <span class="o">{{</span>local_branch<span class="o">}}</span>
+<span class="c1"># 指定远程分支名将本地库上传</span>
+git push <span class="o">{{</span>remote_name<span class="o">}}</span> -u <span class="o">{{</span>remote_branch<span class="o">}}</span>
+<span class="c1"># 删除远程库中的一个分支</span>
+git push <span class="o">{{</span>remote_name<span class="o">}}</span> --delete <span class="o">{{</span>remote_branch<span class="o">}}</span>
+
+<span class="c1"># 拉取远程仓库</span>
+git fetch <span class="c1"># 拉取</span>
+git merge <span class="c1"># 合并</span>
+git pull <span class="c1"># 拉取并合并</span>
+git pull origin master <span class="c1"># 指定远程库的分支拉取</span>
+
+<span class="c1"># 查看状态</span>
+git status
+git diff <span class="c1"># 命令查看文件是如何被修改</span>
+git log <span class="c1"># 查看合并日志，以及 Head 信息</span>
+git log --oneline --decorate --graph
+</pre></div>
+</div>
+<section id="id6">
+<h4>分支的创建与合并<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<p>注意 <code class="docutils literal notranslate"><span class="pre">iss53</span></code> 从未出现在远端</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git checkout -b iss53 <span class="c1"># 在当前分支，创建新分支</span>
+<span class="c1"># 等价于下面两条</span>
+git branch iss53
+git checkout iss53
+<span class="c1"># 然后修复 bug</span>
+
+<span class="c1"># 修复好回到 main</span>
+git checkout main
+git merge iss53
+<span class="c1"># 最后删除 iss53</span>
+git branch -d iss53
+</pre></div>
+</div>
+<p>如果不允许不想干分支合并请用</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git merge iss53 --allow-unrelated-histories
+</pre></div>
+</div>
+</section>
+<section id="id7">
+<h4>如何更换 git 的远程库<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<p>ssh 地址：<code class="docutils literal notranslate"><span class="pre">git&#64;github.com:zhaisilong/software.git</span></code>
+https 地址：<code class="docutils literal notranslate"><span class="pre">https://github.com/zhaisilong/software</span></code></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git remote set-url origin &lt;ssh地址&gt; <span class="p">|</span> &lt;https地址&gt;
+</pre></div>
+</div>
+</section>
+<section id="id8">
+<h4>配置命令别名<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># 告诉Git，以后st就表示status：</span>
+$ git config --global alias.st status
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="id9">
+<h2>忽略特殊文件<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<p>不需要从头写<code class="docutils literal notranslate"><span class="pre">.gitignore</span></code>文件，GitHub已经为我们准备了各种配置文件，只需要组合一下就可以使用了。所有配置文件可以直接在线浏览：<a class="reference external" href="https://github.com/github/gitignore">https://github.com/github/gitignore</a></p>
+<p><code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> 文件的格式规范如下：</p>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">＃</span></code> 注释</p>
+<ul class="simple">
+<li><p>不允许行内注释</p></li>
+</ul>
+</li>
+<li><p>可以使用标准的 glob 模式匹配</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">!</span></code> 开头表示不忽略</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/</span></code> 开头表示根目录,<code class="docutils literal notranslate"><span class="pre">/</span></code>结尾表示目录
+<code class="docutils literal notranslate"><span class="pre">/*.js</span></code>可以匹配<code class="docutils literal notranslate"><span class="pre">app.js</span></code>，但无法匹配<code class="docutils literal notranslate"><span class="pre">js/app.js</span></code>。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">**</span></code>表示匹配零到多级目录</p></li>
+</ol>
+</section>
+<section id="id10">
+<h2>子模块<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<p>子模块允许你将一个 Git 仓库作为另一个 Git 仓库的子目录。默认情况下，子模块会将子项目放到一个与仓库同名的目录中。</p>
+<p>创建名为 <code class="docutils literal notranslate"><span class="pre">.gitmodules</span></code> 的文件。该配置文件保存了项目 URL 与已经拉取的本地目录之间的映射</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git submodule add
+</pre></div>
+</div>
+<section id="id11">
+<h3>克隆带有子模块的仓库<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<p>正常 clone 包含子模块的函数之后，由于.submodule 文件的存在 someSubmodule 已经自动生成。但是里面是空的。还需要执行 2 个命令。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># clone 父仓库的时候加上 --recursive，会自动初始化并更新仓库中的每一个子模块</span>
+git clone --recursive https://github.com/chaconinc/MainProject
+
+
+<span class="c1"># 或者分步拉取</span>
+<span class="c1">## 用来初始化本地配置文件</span>
+git submodule init 
+<span class="c1">## 从该项目中抓取所有数据并检出父项目中列出的合适的提交(指定的提交)。</span>
+git submodule update
+
+<span class="c1"># 更新子模块</span>
+<span class="c1">## Git 将会进入子模块然后抓取并更新，默认更新 master 分支</span>
+git submodule update --remote
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id12">
+<h2>标签管理<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<p>如果你达到一个重要的阶段，并希望永远记住那个特别的提交快照，你可以使用 git tag 给它打上标签。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git tag <span class="c1"># 查看标签信息</span>
+git tag -a v1.0
+git tag -a v0.9 85fc7e7 <span class="c1"># 追加标签，忘记了的话</span>
+git log --oneline --decorate --graph
+<span class="c1"># 指定标签信息</span>
+git tag -a v1.0 -m <span class="s2">&quot;runoob.com标签&quot;</span>
+<span class="c1"># 用 gpg 指定标签信息</span>
+</pre></div>
+</div>
+</section>
+<section id="gitee">
+<h2>Gitee<a class="headerlink" href="#gitee" title="Permalink to this headline">¶</a></h2>
+<p>使用 GitHub 时，国内的用户经常遇到的问题是访问速度太慢，有时候还会出现无法连接的情况（原因你懂的）。</p>
+<p>如果我们希望体验 Git 飞一般的速度，可以使用国内的 Git 托管服务——<a class="reference external" href="https://www.gitee.com">Gitee</a></p>
+</section>
+<section id="git-lfs">
+<h2>git-lfs<a class="headerlink" href="#git-lfs" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># 安装</span>
+sudo apt-get install git-lfs
+<span class="c1"># 关联 git，这一步的目的是改变 git 的全局配置，查看 .gitconfig 文件</span>
+git lfs install
+</pre></div>
+</div>
+<p>用 LFS 追踪的文件，这一步的目的是下面的文件变成 LFS 文件，支持通配符。操作完成后会生成或更新 <em>.gitattributes</em> 配置文件</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git lfs track <span class="s2">&quot;*.sql&quot;</span>
+git lfs untrack <span class="s2">&quot;文档.doc&quot;</span>
+git lfs ls-files
+git add .gitattributes
+git commit -m <span class="s2">&quot;add .gitattributes&quot;</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="tmux.html" class="btn btn-neutral float-left" title="tmux" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sys/index.html" class="btn btn-neutral float-right" title="System Control" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, zhaisilong.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
