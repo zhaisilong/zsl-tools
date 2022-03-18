@@ -1,12 +1,12 @@
-from setuptools import find_packages, setup
+from setuptools import setup
 
 setup(
-    name="zsl-tools",
+    name="ztools",
     version='0.1.0',
     description='Useful tools',
     author='zhaisilong',
     author_email='zhaisilong@outlook.com',
-    packages=find_packages(),
+    packages=['cli'],
     long_description_content_type="text/markdown",
     include_package_data=True,
     zip_safe=False,
@@ -16,4 +16,10 @@ setup(
         'recommonmark',
         'sphinx_rtd_theme',
     ],
+    entry_points={
+        "console_scripts": [
+            "new=cli.new:new_entry",
+        ],
+    }
 )
+

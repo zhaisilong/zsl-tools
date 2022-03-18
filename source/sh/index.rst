@@ -7,6 +7,7 @@ Shell
 
    Tmux <tmux>
    Git <git>
+   Aria2 <aria2>
 
 .. toctree::
    :maxdepth: 2

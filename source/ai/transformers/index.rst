@@ -1,11 +1,13 @@
-AutoML
+Transformers
 =====================================
+
+
 
 .. toctree::
    :glob:
    :maxdepth: 1
    :caption: Contents
 
-   Intro <automl>
-   AutoGluon: AutoML for Text, Image, and Tabular Data <autogluon>
+   Huggingface Tran
+
 
