@@ -65,7 +65,7 @@ pip install recommonmark
 extensions = ['recommonmark']
 ```
 
-支持 markdown 的表格，表格在本地可行但是无法托管到 Read the docs 上。因此，这里推介大家学一下 reStructure
+支持 markdown 的表格，表格在本地可行但是无法**托管到 Read the docs 上**。因此，这里推介大家学一下 reStructure
 
 ```bash
 pip install sphinx-markdown-tables
