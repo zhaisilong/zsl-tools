@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Read The Docs &mdash; zsl-tools 0.0.1 documentation</title>
+  <title>Read The Docs &mdash; zsl-tools 0.1.0 文档</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -15,9 +15,10 @@
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
     <script src="../../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
     <link rel="next" title="reStructuredText" href="restructuredtext.html" />
     <link rel="prev" title="Markdown" href="md.html" /> 
 </head>
@@ -40,6 +41,7 @@
               <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../intro.html">Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../awesome/index.html">Awesome</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Basic</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Blog</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="md.html">Markdown</a></li>
@@ -47,6 +49,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Read The Docs</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#sphinx">Sphinx</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#markdown-to-restructuredtext-with-pandoc">Markdown to reStructuredText with Pandoc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#faq">FAQ</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#see-also">See also</a></li>
 </ul>
 </li>
@@ -88,9 +91,9 @@
            <div itemprop="articleBody">
              
   <section id="read-the-docs">
-<h1>Read The Docs<a class="headerlink" href="#read-the-docs" title="Permalink to this headline">¶</a></h1>
+<h1>Read The Docs<a class="headerlink" href="#read-the-docs" title="永久链接至标题">¶</a></h1>
 <section id="sphinx">
-<h2>Sphinx<a class="headerlink" href="#sphinx" title="Permalink to this headline">¶</a></h2>
+<h2>Sphinx<a class="headerlink" href="#sphinx" title="永久链接至标题">¶</a></h2>
 <p>Sphinx 是一个基于 Python 的文档生成项目，最早只是用来生成 Python 官方文档，随着工具的完善， 越来越多的知名的项目也用他来生成文档，甚至完全可以用他来写书采用 <code class="docutils literal notranslate"><span class="pre">reStructuredText</span></code> 作为文档写作语言, 不过也可以通过模块支持其他格式，待会我会介绍怎样支持<code class="docutils literal notranslate"><span class="pre">MarkDown</span></code>格式。</p>
 <p>Sphinx 提供的 <code class="docutils literal notranslate"><span class="pre">API</span> <span class="pre">documentation</span></code> 生成器称为 <code class="docutils literal notranslate"><span class="pre">sphinx-apidoc</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install sphinx sphinx-autobuild sphinx_rtd_theme
@@ -117,7 +120,7 @@ make html
 </pre></div>
 </div>
 <section id="conf-py">
-<h3>使用主题修改 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code><a class="headerlink" href="#conf-py" title="Permalink to this headline">¶</a></h3>
+<h3>使用主题修改 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code><a class="headerlink" href="#conf-py" title="永久链接至标题">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sphinx_rtd_theme</span>
 <span class="n">html_theme</span> <span class="o">=</span> <span class="s2">&quot;sphinx_rtd_theme&quot;</span>
 <span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="n">sphinx_rtd_theme</span><span class="o">.</span><span class="n">get_html_theme_path</span><span class="p">()]</span>
@@ -125,7 +128,7 @@ make html
 </div>
 </section>
 <section id="id1">
-<h3>运行构建<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3>运行构建<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
 <p><em>-b</em> 选择了生成器，Sphinx将会生成HTML格式</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sphinx-build -b html sourcedir builddir
 </pre></div>
@@ -136,7 +139,7 @@ make html
 </div>
 </section>
 <section id="sphinx-markdown">
-<h3>配置 Sphinx 项目以获得 Markdown 支持<a class="headerlink" href="#sphinx-markdown" title="Permalink to this headline">¶</a></h3>
+<h3>配置 Sphinx 项目以获得 Markdown 支持<a class="headerlink" href="#sphinx-markdown" title="永久链接至标题">¶</a></h3>
 <p><a class="reference external" href="https://recommonmark.readthedocs.io/en/latest/index.html">recommonmark — Recommonmark 0.7.1 documentation</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install recommonmark
 <span class="c1"># 然后修改 conf.py</span>
@@ -155,15 +158,38 @@ make html
 </section>
 </section>
 <section id="markdown-to-restructuredtext-with-pandoc">
-<h2>Markdown to reStructuredText with Pandoc<a class="headerlink" href="#markdown-to-restructuredtext-with-pandoc" title="Permalink to this headline">¶</a></h2>
+<h2>Markdown to reStructuredText with Pandoc<a class="headerlink" href="#markdown-to-restructuredtext-with-pandoc" title="永久链接至标题">¶</a></h2>
 <p>如果你熟悉 Markdown 写作。你可以使用 Pandoc 将成稿的 Markdown 转化为 reStructuredText</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo apt install pandoc
 pandoc -s test.md -o test.rst
 </pre></div>
 </div>
 </section>
+<section id="faq">
+<h2>FAQ<a class="headerlink" href="#faq" title="永久链接至标题">¶</a></h2>
+<p>用 Read The Docs build 时 pdf 生成错误，在 <code class="docutils literal notranslate"><span class="pre">config.py</span></code> 添加</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">latex_elements</span><span class="o">=</span><span class="p">{</span><span class="c1"># The paper size (&#39;letterpaper&#39; or &#39;a4paper&#39;).</span>
+<span class="s1">&#39;papersize&#39;</span><span class="p">:</span><span class="s1">&#39;a4paper&#39;</span><span class="p">,</span><span class="c1"># The font size (&#39;10pt&#39;, &#39;11pt&#39; or &#39;12pt&#39;).</span>
+<span class="s1">&#39;pointsize&#39;</span><span class="p">:</span><span class="s1">&#39;12pt&#39;</span><span class="p">,</span><span class="s1">&#39;classoptions&#39;</span><span class="p">:</span><span class="s1">&#39;,oneside&#39;</span><span class="p">,</span><span class="s1">&#39;babel&#39;</span><span class="p">:</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="c1">#必須</span>
+<span class="s1">&#39;inputenc&#39;</span><span class="p">:</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="c1">#必須</span>
+<span class="s1">&#39;utf8extra&#39;</span><span class="p">:</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="c1">#必須</span>
+<span class="c1"># Additional stuff for the LaTeX preamble.</span>
+<span class="s1">&#39;preamble&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">\usepackage</span><span class="si">{xeCJK}</span><span class="s2"></span>
+<span class="s2">\usepackage</span><span class="si">{indentfirst}</span><span class="s2"></span>
+<span class="s2">\setlength{\parindent}</span><span class="si">{2em}</span><span class="s2"></span>
+<span class="s2">\setCJKmainfont{WenQuanYi Micro Hei}</span>
+<span class="s2">\setCJKmonofont[Scale=0.9]{WenQuanYi Micro Hei Mono}</span>
+<span class="s2">\setCJKfamilyfont</span><span class="si">{song}</span><span class="s2">{WenQuanYi Micro Hei}</span>
+<span class="s2">\setCJKfamilyfont</span><span class="si">{sf}</span><span class="s2">{WenQuanYi Micro Hei}</span>
+<span class="s2">\XeTeXlinebreaklocale &quot;zh&quot;</span>
+<span class="s2">\XeTeXlinebreakskip = 0pt plus 1pt</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
 <section id="see-also">
-<h2>See also<a class="headerlink" href="#see-also" title="Permalink to this headline">¶</a></h2>
+<h2>See also<a class="headerlink" href="#see-also" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.xncoding.com/2017/01/22/fullstack/readthedoc.html">使用 ReadtheDocs 托管文档</a></p></li>
 </ul>
@@ -181,7 +207,7 @@ pandoc -s test.md -o test.rst
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, zhaisilong.</p>
+    <p>&#169; 版权所有 2022, zhaisilong.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

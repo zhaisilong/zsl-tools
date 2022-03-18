@@ -9,7 +9,7 @@ Welcome to zsl-tools's documentation!
    :caption: Contents
 
    Intro <intro>
-   Awesomes <awesome/index>
+   Awesome <awesome/index>
    Basic <basic/index>
    Shell <sh/index>
    Python <py/index>
