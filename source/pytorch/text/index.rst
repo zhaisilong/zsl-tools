@@ -1,11 +1,9 @@
-Python DataFrame
+PyTorch Text
 =====================================
 
 .. toctree::
    :maxdepth: 1
    :caption: Contents
 
-   Python Apache Arrow <pyarrow>
-   Python CSV <csv>
-   Jsonlines <jsonl>
+   Pytorch Text <torchtext/index>
 
