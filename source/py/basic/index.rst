@@ -6,3 +6,4 @@ Python
    :caption: Contents
 
    Python OS <os>
+   Python Debug <pdb>
