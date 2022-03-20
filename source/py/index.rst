@@ -6,3 +6,5 @@ Python
    :caption: Contents
 
    Python Style <style/index>
+   Python Basic <basic/index>
+   Python DataFrame <dataframe/index>
