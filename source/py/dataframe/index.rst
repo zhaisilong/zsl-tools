@@ -8,4 +8,5 @@ Python DataFrame
    Python Apache Arrow <pyarrow>
    Python CSV <csv>
    Jsonlines <jsonl>
+   Pandas <pd>
 
