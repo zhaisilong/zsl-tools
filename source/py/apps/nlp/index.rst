@@ -1,9 +1,8 @@
-PyTorch Text
+NLP
 =====================================
 
 .. toctree::
    :maxdepth: 1
    :caption: Contents
 
-   torchtext introduction <intro>
-
+   spaCy <spacy/index>

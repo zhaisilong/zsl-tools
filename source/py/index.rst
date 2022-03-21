@@ -8,3 +8,4 @@ Python
    Python Style <style/index>
    Python Basic <basic/index>
    Python DataFrame <dataframe/index>
+   Python Application <apps/index>

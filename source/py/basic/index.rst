@@ -7,3 +7,4 @@ Python
 
    Python OS <os>
    Python Debug <pdb>
+   Python Environment <env>
