@@ -1,9 +1,8 @@
-PyTorch Text
+Python Applications
 =====================================
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Contents
 
-   torchtext introduction <intro>
-
+   NLP <nlp/index>
