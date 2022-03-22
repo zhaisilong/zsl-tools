@@ -11,5 +11,6 @@ AI
    Prerequisites <prerequisites/index>
    AutoML <automl/index>
    Transformers <transformers/index>
+   Hugging Face <face/index>
 
 

@@ -159,7 +159,6 @@ Tips: poetry config 之后接 `--unset`、`--local`
 - unset :重置某项的配置
 - local：配置只对本地的项目生效，不影响全局配置
 
-
 ```shell
 poetry config --list
 
@@ -171,6 +170,8 @@ poetry config virtualenvs.create false --local
 
 poetry config virtualenvs.path .virtualenvs  --local
 ```
+
+> 注意: python3.8(包括) 以下，不能 poetry config virtualenvs.in-project true
 
 ### Python Poetry 管理包安装速度慢的解决办法
 
@@ -184,8 +185,6 @@ index-url = http://mirrors.aliyun.com/pypi/simple/
 [install]
 trusted-host = mirrors.aliyun.com
 ```
-
-
 
 ## See also
 
