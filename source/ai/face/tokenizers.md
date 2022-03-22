@@ -25,7 +25,6 @@ tokens = tokenizer(sequences, padding=True, truncation=True, return_tensors="pt"
 output = model(**tokens)
 ```
 
-
 ## See also
 
 - [Transformers Tokenizer API 的使用](https://zhuanlan.zhihu.com/p/390821442)

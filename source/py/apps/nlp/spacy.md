@@ -14,9 +14,9 @@ sudo pip install spacy
 
 - [快速掌握spacy在python中进行自然语言处理（附代码&链接）](https://www.jiqizhixin.com/articles/2019-10-25-5)
 
-https://www.xiuweihan.cn/2021/04/15/2021-04-15-nlp%E4%B9%8Btransformers%E5%BA%93/
-https://www.cxymm.net/article/YangStudent/118891205
-https://blog.csdn.net/bonjourdeutsch/article/details/106481382
+
+
+
 https://blog.csdn.net/qq_28790663/article/details/115374855
 https://www.debugger.wiki/article/html/1587651786815919
 https://zhuanlan.zhihu.com/p/160813500
