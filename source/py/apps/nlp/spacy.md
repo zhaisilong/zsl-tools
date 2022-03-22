@@ -8,6 +8,7 @@ spaCy 提供了一个简洁的 API 来访问它的方法和属性，它由经过
 
 ```shell
 sudo pip install spacy
+<<<<<<< HEAD
 ```
 
 ## See also
@@ -43,3 +44,6 @@ https://course.spacy.io/zh/chapter1
 https://course.spacy.io/zh/chapter2
 
 
+=======
+```
+>>>>>>> fa2acf2b1d776bd85d98fb57cffd156bbf3e8411
