@@ -8,20 +8,12 @@ spaCy 提供了一个简洁的 API 来访问它的方法和属性，它由经过
 
 ```shell
 sudo pip install spacy
-<<<<<<< HEAD
 ```
 
 ## See also
 
 - [快速掌握spacy在python中进行自然语言处理（附代码&链接）](https://www.jiqizhixin.com/articles/2019-10-25-5)
 
-
-
-
-
-
-
-https://www.heywhale.com/mw/project/609f609f06b942001794ff44
 https://www.xiuweihan.cn/2021/04/15/2021-04-15-nlp%E4%B9%8Btransformers%E5%BA%93/
 https://www.cxymm.net/article/YangStudent/118891205
 https://blog.csdn.net/bonjourdeutsch/article/details/106481382
@@ -43,7 +35,4 @@ https://www.pythonf.cn/read/128035
 https://course.spacy.io/zh/chapter1
 https://course.spacy.io/zh/chapter2
 
-
-=======
-```
->>>>>>> fa2acf2b1d776bd85d98fb57cffd156bbf3e8411
+fa2acf2b1d776bd85d98fb57cffd156bbf3e8411

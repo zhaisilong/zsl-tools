@@ -116,8 +116,6 @@ PIPENV_DOTENV_LOCATION=/path/to/.env pipenv shell
 PIPENV_DONT_LOAD_ENV=1 pipenv shell
 ```
 
-
-
 ## 其他
 
 ```shell
