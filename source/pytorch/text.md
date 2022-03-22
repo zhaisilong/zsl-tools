@@ -1,4 +1,23 @@
-# torchtext introduction
+# Torchtext
+
+先去 Github 了解个大概
+
+- [Github](https://github.com/pytorch/text)
+
+这是[官方文档 | 手册](https://torchtext.readthedocs.io/en/latest/)
+这是[官网的一个教程](https://pytorch.org/text/stable/tutorials/sst2_classification_non_distributed.html)
+
+```shell
+pip install torchtext
+pip install spacy
+python -m spacy download en_core_web_sm
+pip install sacremoses
+```
+
+```python
+
+```
+
 
 ## torchtext 的组件
 
