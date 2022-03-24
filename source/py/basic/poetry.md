@@ -20,7 +20,7 @@ poetry 和 pipenv 类似，另外还提供了打包和发布的功能。
 方式一：（推荐） 
 
 ```shell
-curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+curl -sSL https://install.python-poetry.org | python3 -
 ```
 
 方式二：（pip）为了防止依赖冲突不推荐使用 pip 的方式直接安装
@@ -74,6 +74,35 @@ poetry show  numpy # 查看项目安装的依赖
 poetry show -t  # 树形结构查看项目安装的依赖
 ```
 
+add
+
+```shell
+poetry add pendulum@^2.0.5
+poetry add "pendulum>=2.0.5"
+
+poetry add pendulum@latest
+
+poetry add git+https://github.com/sdispater/pendulum.git
+poetry add git+ssh://git@github.com/sdispater/pendulum.git
+poetry add git+https://github.com/sdispater/pendulum.git#develop
+poetry add git+https://github.com/sdispater/pendulum.git#2.0.5
+
+poetry add ./my-package/
+poetry add ../my-package/dist/my-package-0.1.0.tar.gz
+poetry add ../my-package/dist/my_package-0.1.0.whl
+
+
+```
+
+cache
+
+```shell
+poetry cache list
+
+poetry cache clear --all
+poetry cache clear <cache>
+```
+
 虚拟环境管理
 
 ```shell
@@ -120,10 +149,12 @@ poetry publish -r my-repository
 [[tool.poetry.source]]
 name = "aliyun"
 url = "https://mirrors.aliyun.com/pypi/simple/"
+secondary = true
 
 [[tool.poetry.source]]
 name = "tsinghua"
 url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
+default = true
 ```
 
 也可以用命令行

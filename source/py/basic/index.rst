@@ -10,3 +10,4 @@ Python
    Python Debug <pdb>
    Python Pipenv <pipenv>
    Poetry <poetry>
+   Pyenv <pyenv>
