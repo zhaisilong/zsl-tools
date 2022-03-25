@@ -7,3 +7,4 @@ Basic
    :caption: Contents
 
    Blog <blog/index>
+   IDE <ide/index>

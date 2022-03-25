@@ -1,11 +1,9 @@
-PyTorch
+Basic
 =====================================
 
 .. toctree::
+   :glob:
    :maxdepth: 1
    :caption: Contents
 
-   Pytorch Text <text>
-   PyTorch Lightning <pl>
-
-
+   pycharm <pycharm>
