@@ -1,13 +1,9 @@
-PyTorch
+Python 效率
 =====================================
 
 .. toctree::
    :maxdepth: 1
    :caption: Contents
 
-
-   Pytorch <pytorch>
-   Pytorch Text <text>
-   PyTorch Lightning <pl>
-
+   Joblib <joblib>
 
