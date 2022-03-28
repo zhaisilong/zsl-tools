@@ -17,8 +17,7 @@ Welcome to zsl-tools's documentation!
    Bio <bio/index>
    ML <ml/index>
    AI <ai/index>
-   Pytorch <pytorch/index>
-   Tensorflow <tf/index>
+   人工智能 | 最佳实践<practice/index>
 
 Indices and tables
 ==================
