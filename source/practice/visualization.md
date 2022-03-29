@@ -1,5 +1,21 @@
 # 可视化
 
+## tensorboard
+
+Tensorboard 原本是 TensorFlow 的可视化工具，而目前在TensorboardX 的加持下，其他深度学习计算框架也可使用TensorBoard 工具进行可视化操作了。
+
+```shell
+pip install tensorboardX
+```
+
+```python
+from torch.utils.tensorboard import SummaryWriter
+```
+
+- [PyTorch建模可视化工具TensorBoard的安装与使用](https://mp.weixin.qq.com/s?__biz=MzA4ODc5NzE1OA==&mid=2653606281&idx=1&sn=4206de98376ef789cb23705a158f03fd&chksm=8bfacb00bc8d42160c144f8d9b988e824164ca647266a0dcc20a9cb50b8a9e736ac002f7bc95&mpshare=1&scene=1&srcid=0329WgipzVyNHy5XYTzr9DD7&sharer_sharetime=1648522373488&sharer_shareid=f66ef27ade3d509229b2afd8611df712#rd)
+
+## Others
+
 ```python
 from matplotlib.colors import to_rgba
 import matplotlib.plot as plt

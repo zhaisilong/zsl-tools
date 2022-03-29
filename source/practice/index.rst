@@ -6,13 +6,14 @@
    :caption: Contents
 
 
-   PyTorch Basic <basic>
-   PyTorch 数据 <dataset>
-   PyTorch 技巧 <tricks>
-   PyTorch 配置与日志 <conf_log>
-   PyTorch 可视化 <visualization>
-   PyTorch Text <text>
+   基础 <basic>
+   数据 <dataset>
+   配置 <conf>
+   初始化 <init>
+   日志 <log>
+   可视化 <visualization>
+   文本 <text>
    PyTorch Lightning <pl>
-   PyTorch Test <test>
+   测试 <test>
 
 

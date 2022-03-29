@@ -1,16 +1,5 @@
 # PyTorch 配置与日志
 
-## 包
-
-```python
-import os
-import torch
-import numpy as np
-from log import warning
-from tqdm.notebook import tqdm
-from tqdm import tqdm
-```
-
 ## 环境变量
 
 ```python
@@ -20,11 +9,10 @@ CHECKPOINT_PATH = os.environ.get("PATH_CHECKPOINT", "saved_models/Activation_Fun
 os.makedirs(CHECKPOINT_PATH, exist_ok=True)
 ```
 
-### notebook
+### jupyter notebook
 
 ```python
 % matplotlib inline
-
 ```
 
 ## 随机数初始化
@@ -52,10 +40,17 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 device = torch.device("cpu") if not torch.cuda.is_available() else torch.device("cuda:0")
 ```
 
-## 日志
+## 命令行参数
 
 ```python
-warnings.filterwarnings("ignore")
+# 命令主题说明
+parser = argparse.ArgumentParser(usage = 'peptide-HLA-I binding prediction')
+parser.add_argument('--peptide_file', type = str, help = 'the path of the .fasta file contains peptides')
+parser.add_argument('--threshold', type = float, default = 0.5, help = 'the threshold to define predicted binder, float from 0 - 1, the recommended value is 0.5')
+parser.add_argument('--cut_peptide', type = bool, default = False, help = 'Whether to split peptides larger than cut_length?')
+parser.add_argument('--cut_length', type = int, default = 9, help = 'if there is a peptide sequence length > 15, we will segment the peptide according the length you choose, from 8 - 15')
+
+# 此时可以查看默认设置的参数
+args = parser.parse_args(args = [])
+args
 ```
-
-

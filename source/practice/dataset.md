@@ -140,3 +140,13 @@ class torch.utils.data.WeightedRandomSampler(weights, num_samples, replacement=T
 class torch.utils.data.BatchSampler(sampler, batch_size, drop_last): 在一个batch中封装一个其他的采样器。
 class torch.utils.data.distributed.DistributedSampler(dataset, num_replicas=None, rank=None):采样器可以约束数据加载进数据集的子集。
 ```
+
+## 数据保存与加载
+
+### numpy
+
+```python
+# 保存字典对象
+np.save(path, experimental_dict)
+np.load(pwd + 'experimental_dataset_dict.npy', allow_pickle = True)
+```

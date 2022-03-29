@@ -115,5 +115,9 @@ df.T  # 转置
 ```python
 pd.concat(objs, axis=0, join='outer', join_axes=None, ignore_index=False,
           keys=None, levels=None, names=None, verify_integrity=False)
+
+# 用 a 作为键内交，是默认的
+df1.merge(df2, how='inner', on='a')
+# how: left, right, cross
 ```
 

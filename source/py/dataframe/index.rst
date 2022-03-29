@@ -9,4 +9,6 @@ Python DataFrame
    Python CSV <csv>
    Jsonlines <jsonl>
    Pandas <pd>
+   Numpy <np>
+   数据压缩 ZipFile <zipfile>
 
