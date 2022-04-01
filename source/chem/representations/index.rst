@@ -9,3 +9,5 @@ Representations
 
    MolVS <molvs>
    Selfies <selfies>
+   SMILES <smiles>
+   deepsmiles <deepsmiles>

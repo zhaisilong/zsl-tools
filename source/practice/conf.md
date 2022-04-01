@@ -1,5 +1,9 @@
 # PyTorch 配置与日志
 
+```python
+torch.__version__
+```
+
 ## 环境变量
 
 ```python

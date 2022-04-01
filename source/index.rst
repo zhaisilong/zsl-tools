@@ -17,7 +17,8 @@ Welcome to zsl-tools's documentation!
    Bio <bio/index>
    ML <ml/index>
    AI <ai/index>
-   人工智能 | 最佳实践<practice/index>
+   人工智能 | 最佳实践 <practice/index>
+   论文 <paper/index>
 
 Indices and tables
 ==================

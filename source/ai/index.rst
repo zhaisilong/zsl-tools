@@ -12,5 +12,6 @@ AI
    AutoML <automl/index>
    Transformers <transformers/index>
    Hugging Face <face/index>
+   Opennmt <opennmt/index>
 
 
