@@ -11,4 +11,5 @@ Python DataFrame
    Pandas <pd>
    Numpy <np>
    数据压缩 ZipFile <zipfile>
+   Pickle <pickle>
 

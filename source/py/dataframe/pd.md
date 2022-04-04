@@ -31,6 +31,9 @@ df.describe()  # 描述统计信息
 df['A']  # 按列名取
 df[0:3]  # 按行数取
 df.loc['2021-01-01':'2021-01-02', ['A', 'B']]  # 指定具体的标签
+df.loc[['2021-01-01', '2021-01-02'], ['A', 'B']]  # 指定具体的标签
+df.loc[['std'], ...]
+df.at[int(index), 'column_nam']  # 取点
 df.iloc[3:5, 0: 3]  # 指定标签的索引位置
 ```
 
@@ -121,3 +124,18 @@ df1.merge(df2, how='inner', on='a')
 # how: left, right, cross
 ```
 
+## 序列化
+
+使用 `pandas` 直接序列化
+
+```python
+import pandas as pd
+df = pd.DataFrame([range(11), range(100,110)], columns=list('abcdefghijk'))
+df.to_pickle('my_df.pickle')
+df2 = pd.read_pickle('my_df.pickle')
+```
+
+
+## 统计
+
+- [Python 数据分析之 pandas 统计分析](https://blog.csdn.net/A632189007/article/details/76176985)

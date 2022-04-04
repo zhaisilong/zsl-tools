@@ -5,7 +5,7 @@ Python
    :maxdepth: 2
    :caption: Contents
 
-   Python Style <style/index>
+   Python 风格 <style/index>
    Python Basic <basic/index>
    Python DataFrame <dataframe/index>
    Python Application <apps/index>
