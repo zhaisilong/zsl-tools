@@ -125,6 +125,15 @@ git log # 查看合并日志，以及 Head 信息
 git log --oneline --decorate --graph
 ```
 
+### 删除远程仓库的文件
+
+```shell
+git rm -r -n --cached data/
+git rm -n --cached data/
+git commit -m "delete"
+git push
+```
+
 #### 分支的创建与合并
 
 注意 `iss53` 从未出现在远端

@@ -1,4 +1,4 @@
-Bio
+Bio: Life Language Processing
 =====================================
 
 .. toctree::
