@@ -13,5 +13,6 @@ AI
    Transformers <transformers/index>
    Hugging Face <face/index>
    Opennmt <opennmt/index>
+   增量学习 <incremental/index>
 
 
