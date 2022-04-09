@@ -1,11 +1,9 @@
-Basic
+合作
 =====================================
 
 .. toctree::
    :glob:
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents
 
-   Blog <blog/index>
-   IDE <ide/index>
-   合作 <corp/index>
+   GitLab <gitlab>
