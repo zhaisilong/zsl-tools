@@ -14,6 +14,7 @@
    可视化 <visualization>
    文本 <text>
    PyTorch Lightning <pl>
-   测试 <test>
+   Metrics <metrics>
+   测试 Test<test>
 
 
