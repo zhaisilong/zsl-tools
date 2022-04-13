@@ -9,3 +9,6 @@ Python Style
    Python Style <pystyle>
    PPrint <pprint>
    PyDantic <pydantic>
+   Black <black>
+   Flake8 <flake8>
+   Pylint <pylint>
