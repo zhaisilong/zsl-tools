@@ -1,7 +1,4 @@
----
-title: shutil
-tags: [shell, util, python]
----
+# shutil
 
 shutil 可以简单地理解为 `sh + util`，shell 工具的意思。shutil 模块是对 os 模块的补充，主要针对文件的拷贝、删除、移动、压缩和解压操作。
 

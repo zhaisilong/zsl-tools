@@ -11,4 +11,4 @@ Python
    Python Pipenv <pipenv>
    Poetry <poetry>
    Pyenv <pyenv>
-   :+1: :+1: Python 最佳实践指南 <https://pythonguidecn.readthedocs.io/zh/latest/>
+   Python 最佳实践指南 <https://pythonguidecn.readthedocs.io/zh/latest/>
