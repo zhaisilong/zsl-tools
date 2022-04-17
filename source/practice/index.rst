@@ -16,5 +16,8 @@
    PyTorch Lightning <pl>
    Metrics <metrics>
    测试 Test<test>
+   Trainer <trainer>
+   Scheduler <scheduler>
+   
 
 

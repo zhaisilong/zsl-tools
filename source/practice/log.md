@@ -1,5 +1,20 @@
 # 日志
 
+## lightning
+
+### rank_zero
+
+```python
+# rank_zero_warn, rank_zero_debug, rank_zero_deprecation
+from pytorch_lightning.utilities import rank_zero_info
+rank_zero_info(
+    'info 1'
+    'info 2'
+)
+```
+
+
+
 ## 日志简单过滤
 
 ```python

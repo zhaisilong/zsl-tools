@@ -17,3 +17,4 @@ Shell
    系统管理 <sys/index>
    网络 <net/index>
    终端 <terminal/index>
+   综合实战 <practice/index>
