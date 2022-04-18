@@ -15,4 +15,11 @@ AI
    Opennmt <opennmt/index>
    增量学习 <incremental/index>
 
+.. toctree::
+   :glob:
+   :maxdepth: 1
+   :caption: Contents
+
+   主动学习 <al>
+
 

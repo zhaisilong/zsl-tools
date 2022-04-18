@@ -6,5 +6,4 @@
    :maxdepth: 2
    :caption: Contents
 
-   Fingerprints <fps/index>
-   Representations <representations/index>
+   论文写作 <writting/index>
