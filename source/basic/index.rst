@@ -6,6 +6,7 @@ Basic
    :maxdepth: 2
    :caption: Contents
 
+   配置 <config/index>
    Blog <blog/index>
    IDE <ide/index>
    合作 <corp/index>

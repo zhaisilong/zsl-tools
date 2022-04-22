@@ -19,7 +19,7 @@
 4. 人员标注选定的数据子集并将标注的数据子集发送回模型进行处理。
 5. 该过程将继续，直至模型的预测达到所需的置信度和精度水平。
 
-![](https://cdn.jsdelivr.net/gh/xxzhai123/img/img776dab0021964e148edbb2a6c4b8dbee~tplv-k3u1fbpfcp-zoom-in-crop-mark 1304 0 0 0.awebp.webp)
+![al](https://cdn.jsdelivr.net/gh/xxzhai123/img/img776dab0021964e148edbb2a6c4b8dbee~tplv-k3u1fbpfcp-zoom-in-crop-mark 1304 0 0 0.awebp.webp)
 
 另一个主动学习场景即基于流的选择采样（Stream-based Selective Sampling）。
 
@@ -68,7 +68,6 @@
 - 数据都有标签，但是标签的粒度不够。例如，在图像语义分割中，细粒度的标签应该是 pixel-level 的，但给出的标签仅仅是 image-level 的，这就是标签的粒度不够。(Inexact supervison)
 - 数据都有标签，但是标签有很多错误。(Inaccurate supervison)
 
-
 ## 问题与解决
 
 ### 类不平衡问题
@@ -87,6 +86,7 @@
 
 ## Links
 
+- [Learning with not Enough Data Part 2: Active Learning | by Lilian Weng@OpenAI ](https://lilianweng.github.io/posts/2022-02-20-active-learning/)
 - [主动学习方法实践：让模型变“主动”](https://developer.aliyun.com/article/766940)
 - [主动学习(Active Learning)介绍](https://www.jianshu.com/p/e908c3595fc0)
 - [主动学习](https://lccurious.github.io/2019/08/27/Active-Learning/)

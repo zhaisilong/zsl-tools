@@ -1,4 +1,4 @@
-Basic
+配置
 =====================================
 
 .. toctree::
@@ -6,6 +6,5 @@ Basic
    :maxdepth: 1
    :caption: Contents
 
-   pycharm <pycharm>
-   ipython <ipython>
-   jupyter notebook <jupyter>
+   
+   yaml <yaml>

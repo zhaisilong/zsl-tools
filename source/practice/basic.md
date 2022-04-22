@@ -31,7 +31,6 @@ x = torch.Tensor
 x.data  # data 用索引下表访问
 ```
 
-
 ## Basic
 
 ```python
@@ -58,3 +57,6 @@ x.shape
 x.size()
 ```
 
+## 拓展学习资料
+
+- [Pytorch 中的 masked_fill() 方法](https://mp.weixin.qq.com/s?__biz=MzAwNjU0NjA3Ng==&mid=2247489300&idx=2&sn=2f57774e6bbc24a3e3d48da5ed39a30f&chksm=9b0ae0e7ac7d69f168152b8fe872d98fb6cb92962005e0bd146b3ef12fb44ea953c1c6fd19c4&mpshare=1&scene=1&srcid=0419skTv7Thxh4EGyHVDfIyD&sharer_sharetime=1650328747544&sharer_shareid=f66ef27ade3d509229b2afd8611df712#rd)
