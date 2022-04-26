@@ -9,8 +9,6 @@ Contributors
 -------------
 
 - Zhaisilong
-- Gavin
-- Medicine-wave
 
 Goals
 ----------
