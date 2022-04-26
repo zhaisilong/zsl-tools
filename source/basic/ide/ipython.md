@@ -63,7 +63,6 @@ f();: 抑制输出结果
 %magic: 获取魔法命令列表
 ```
 
-
 ## links
 
 - [50 个关于 IPython 的使用技巧，get 起来！](https://zhuanlan.zhihu.com/p/104524108)

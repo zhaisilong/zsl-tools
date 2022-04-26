@@ -134,6 +134,12 @@ git commit -m "delete"
 git push
 ```
 
+### 大容量
+
+```shell
+git config --global http.postBuffer 524288000  
+```
+
 #### 分支的创建与合并
 
 注意 `iss53` 从未出现在远端

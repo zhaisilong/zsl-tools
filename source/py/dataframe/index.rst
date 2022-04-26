@@ -12,4 +12,5 @@ Python DataFrame
    Numpy <np>
    数据压缩 ZipFile <zipfile>
    Pickle <pickle>
+   序列流之 dill <dill>
 
