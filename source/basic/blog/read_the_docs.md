@@ -43,7 +43,7 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 ### 运行构建
 
-*-b* 选择了生成器，Sphinx将会生成HTML格式
+*-b* 选择了生成器，Sphinx 将会生成 HTML 格式
 
 ```bash
 sphinx-build -b html sourcedir builddir
