@@ -1,8 +1,9 @@
 from setuptools import setup
+from source.conf import release
 
 setup(
     name="ztools",
-    version='0.2.0',
+    version=release,
     description='Useful tools',
     author='zhaisilong',
     author_email='zhaisilong@outlook.com',
