@@ -9,3 +9,4 @@ Basic
    Markdown <md>
    Read The Docs <read_the_docs>
    reStructuredText <restructuredtext>
+   Latex <latex>

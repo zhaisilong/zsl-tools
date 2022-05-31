@@ -19,6 +19,7 @@ Welcome to zsl-tools's documentation!
    AI <ai/index>
    人工智能 | 最佳实践 <practice/index>
    论文 <paper/index>
+   书 <books/index>
 
 Indices and tables
 ==================

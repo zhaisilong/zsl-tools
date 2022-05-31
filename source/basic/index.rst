@@ -7,7 +7,7 @@ Basic
    :caption: Contents
 
    配置 <config/index>
-   Blog <blog/index>
+   写作 = <writting/index>
    IDE <ide/index>
    合作 <corp/index>
    风格 <style/index>
