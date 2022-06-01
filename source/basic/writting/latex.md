@@ -1,26 +1,44 @@
 # Latex
 
+Latex 的学习并不简单，想要入门的朋友们要有心理准备。
+你可以看那些半小时入门 Latex 的书，但一定要仔仔细细阅读一本正统的书。
+他能帮助你解答很多疑惑，让你少走弯路。
+下面推介一个简单的入门路径。
+
+1. 阅读各类关于 Latex 学习的帖子：初步了解 Latex。
+2. 学习使用模板，一般官方正规的模板会有详细的模板使用指南，这就涉及到一些边边角角的知识了。推荐几个模板
+   1. 清华和浙大的毕业论文模板，可以在 GitHub 上找到
+   2. ACS 期刊的模板
+3. 最后必须要回归正统，也就是读一些专业的，系统的书，这里推介一下刘海洋的 《Latex 入门》
+
 ## Installation
 
-1. Install pdflatex
+### 安装 texlive
 
 ```shell
 sudo apt-get install texlive-latex-base
 sudo apt-get install texlive-fonts-recommended
 sudo apt-get install texlive-fonts-extra
 sudo apt-get install texlive-latex-extra
+
 # 或者简单一点
 sudo apt-get install texlive-full
+
 # 中文支持
 sudo apt-get install texlive-lang-chinese
 sudo apt-get install texlive-xetex  # 编译引擎
-# 安装好即可使用
-pdflatex latex_source_name.tex
 ```
 
-2. Use pycharm as editor
+### 编译
 
-这里编译的配置要改成 xetex，而不是 pdflatex
+这里只展示 xetex 编译含有中文字符的文档。
+
+```shell
+xelatex example.tex
+bibtex example.aux
+xelatex example.tex
+xelatex example.tex
+```
 
 ## Tutorial
 
@@ -47,7 +65,7 @@ hello, world
 \end{document}
 ```
 
-### 文档
+### 文档以及导言
 
 ```latex
 \documentclass[a4paper, 12pt]{article}
@@ -123,6 +141,8 @@ The first part of the methods.
 
 ### 参考文献
 
+注意：参考文献有两个拓展的宏包，一个是 natbib 一个是 biblatex，他们是不兼容的。
+
 #### BibTeX 文件类型
 
 文献类型（reference type)
@@ -131,21 +151,21 @@ The first part of the methods.
 - @incollection: 表示一个章节
 - @inproceedings: 会议论文
 
-插入文献列表
+不引包，简单地插入文献列表。
 
 ```latex
 \bibliographystyle{plain}
 \bibliography{references}
 ```
 
-参考文献标注
+#### 参考文献标注
 
 使用 `\cite{citationkey}` 来在你想要引用文献的地方插入一个标注。
 如果你不希望在正文中插入一个引用标注，但仍想要在文献列表中显示这次引用，使用 `\nocite{citationkey}` 命令。
 想要在引用中插入页码信息，使用方括号：`\cite[p. 215]{citationkay}`
 要引用多个文献，使用逗号分隔：`\cite{citation01,citation02,citation03}`
 
-引用格式
+#### 引用格式
 
 Plain 方括号包裹数字的形式，如 `[1]`。文献列表按照第一作者的字母表顺序排列。每一个作者的名字是全称。
 Abbrv 与 plain 是相同的，但作者的名字是缩写。
@@ -173,11 +193,20 @@ Alpha 与 plain 一样，但引用的标注是作者的名字与年份组合在�
 
 #### 中文支持
 
-方法一：改变布局和文中字
+推荐方法：改变布局和文中字
 
-`\documentclass{atricle}` -> `\documentclass{ctexart}`
+```latex
+% UTF8 可带可不带
+\documentclass[UTF8]{ctexart}
+```
 
-方法二: 不改变布局
+或者
+
+```latex
+\usepackage[UTF8]{ctex}
+```
+
+其他方法：不改变布局，只显示中文文字
 
 ```latex
 \documentclass{article}
@@ -186,12 +215,6 @@ Alpha 与 plain 一样，但引用的标注是作者的名字与年份组合在�
 \begin{document}
 hello,你好
 \end{document}
-```
-
-方法三：改变布局和文中字
-
-```latex
-\usepackage[UTF8]{ctex}
 ```
 
 #### 字体效果
@@ -300,7 +323,6 @@ Oranges & Orange \\
 \end{tabular}
 ```
 
-
 ### 符号和公式
 
 数学公式, 希腊字母，以及特殊符号都需要在数学环境中使用。
@@ -356,6 +378,18 @@ $$
 % others
 \includegraphics[width=4.00in,height=3.00in]{figure1.eps}
 ```
+
+### Markdown 与 Latex
+
+- [以 Markdown 撰写文稿，以 LaTeX 排版 ](https://liam.page/2020/03/30/writing-manuscript-in-Markdown-and-typesetting-with-LaTeX/)
+
+使用 markdown + pycharm 命令要带 `--shell-escape`
+
+### latex 模板推荐
+
+- [优雅： 书 论文 还有笔记](https://github.com/ElegantLaTeX)
+- [ElegantPaper](https://coder.social/ElegantLaTeX/ElegantPaper)
+- [清华论文 Latex 模板](https://github.com/tuna/thuthesis/)
 
 ## Links
 
