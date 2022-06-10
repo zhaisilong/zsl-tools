@@ -1,5 +1,7 @@
 # zsl-tools
 
+本网站暂停跟新，迁移到知乎
+
 All tools used by zsl
 
 ## Contributors
